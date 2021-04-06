@@ -15,12 +15,18 @@ namespace WindowsFormsApp19
         int s1;
         int s2;
         int s3;
+
+        private double küp(double s1)
+        {
+            s1 = Convert.ToInt32(textBox1.Text);
+            double s5 = Math.Pow(s1, 3);
+            return s5;
+        }
         public int TOPLAM(int s1,int s2,int s3)
         {
             int s4 = s1 + s2 + s3;
             return s4;
         }
-
         private int çarpım(int s1, int s2,int s3)
         {
             int a4 = s1*s2*s3;
@@ -32,8 +38,17 @@ namespace WindowsFormsApp19
         }
         private void button1_Click(object sender, EventArgs e)
         {
-            label1.Text = TOPLAM(10, 20,45).ToString();
-            label2.Text = çarpım(14, 12, 17).ToString();
+            int q1 = Convert.ToInt32(textBox1.Text);
+            int q2 = Convert.ToInt32(textBox2.Text);
+            int q3 = Convert.ToInt32(textBox3.Text);
+
+            label1.Text = TOPLAM(q1, q2, q3).ToString();
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+           
+
         }
     }
 }
